@@ -1,0 +1,42 @@
+body{
+  margin: 0;
+  font-family: $primary_font;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $body-bg;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color;
+}
+
+.section{
+  padding: 100px 0;
+}
+
+.pt-0{
+  padding-top: 0 !important;
+}
+
+h2.sec-title {
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
