@@ -1,4 +1,4 @@
-# tweenmax_test
+# Greensock exercises with VueJS
 
 ## Project setup
 ```

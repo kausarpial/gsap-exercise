@@ -18,15 +18,15 @@
         const timeline = new TimelineMax();
         if( 'fire' == val ){
           timeline.to(box, 1, { 
-            x:200, 
-            rotation: 90,
+            x:"+=80", 
+            rotation: "+=90",
             ease: Back.easeInOut 
           });
         } 
         if( 'reset' == val ){
           timeline.to(box, 1, { 
-            x:0, 
-            rotation: 0,
+            x:"-=80", 
+            rotation: "-=90",
             ease: Back.easeInOut 
           });
         }
