@@ -1,5 +1,5 @@
 <template>
-  <div id="app" @mousemove="followMouse($event)">
+  <div id="app" @mousemove="followMouse($event)" @mouseenter="followMouse($event)">
     <div class="follower" ref="follower"></div>
     <router-view />
   </div>
@@ -32,20 +32,18 @@ export default {
     background: $body_bg;
     min-height: 100vh;
     font-family: $primary_font;
-    // cursor: none;
-    position: relative;
-    z-index: 1;
     .follower{
-      position: absolute;
-      z-index: -1;
+      position: fixed;
+      z-index: 100;
       width: 10px;
       height: 10px;
       top: 50%;
       left: 50%;
       margin: -5px 0 0 -5px;
-      background: $white;
+      background: $primary_color;
       border-radius: 80%;
       backface-visibility: hidden;
+      pointer-events: none;
       &::before{
         position: absolute;
         content: '';
@@ -54,7 +52,7 @@ export default {
         left: 50%; top: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        border: 2px solid $primary_color;
+        border: 2px solid rgba($color: $white, $alpha: 0.3);
       }
     }
   }
