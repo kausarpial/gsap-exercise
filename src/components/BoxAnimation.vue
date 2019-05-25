@@ -8,39 +8,39 @@
 </template>
 
 <script>
-  import { TimelineMax } from 'gsap';
-  export default {
-    name: 'BoxAnimation',
-    methods: {
-      animateBox(val) {
-        const { box } = this.$refs;
-        console.log(val);
-        const timeline = new TimelineMax();
-        if( 'fire' == val ){
-          timeline.to(box, 1, { 
-            x:"+=80", 
-            rotation: "+=90",
-            ease: Back.easeInOut 
-          });
-        } 
-        if( 'reset' == val ){
-          timeline.to(box, 1, { 
-            x:"-=80", 
-            rotation: "-=90",
-            ease: Back.easeInOut 
-          });
-        }
-      },
-    },
+import { TimelineMax } from "gsap";
+export default {
+  name: "BoxAnimation",
+  methods: {
+    animateBox(val) {
+      const { box } = this.$refs;
+      console.log(val);
+      const timeline = new TimelineMax();
+      if ("fire" == val) {
+        timeline.to(box, 1, {
+          x: "+=80",
+          rotation: "+=90",
+          ease: Back.easeInOut
+        });
+      }
+      if ("reset" == val) {
+        timeline.to(box, 1, {
+          x: "-=80",
+          rotation: "-=90",
+          ease: Back.easeInOut
+        });
+      }
+    }
   }
+};
 </script>
 
 <style lang="scss" scoped>
-  .box { 
-    height: 60px; 
-    width: 60px; 
-    background: $primary-color; 
-    border-radius: 4px;
-    margin: 0 auto;
-  }
+.box {
+  height: 60px;
+  width: 60px;
+  background: $primary-color;
+  border-radius: 4px;
+  margin: 0 auto;
+}
 </style>
